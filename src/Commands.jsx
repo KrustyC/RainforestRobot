@@ -40,6 +40,7 @@ const Commands = () => {
       inputs.instructions
     );
 
+    // Update robot coordinates, according to the instruction given
     setInputs({
       ...inputs,
       robotCoordinates: result.finalPosition,
@@ -53,6 +54,13 @@ const Commands = () => {
     rainforestRobot.reset();
     setStatus('');
     setDroppedBags(0);
+    // Reset all the inputs
+    setInputs({
+      conveyorBeltCoordinates: '',
+      robotCoordinates: '',
+      crates: '',
+      instructions: '',
+    });
   };
 
   return (
